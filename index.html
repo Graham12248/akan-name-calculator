@@ -3,15 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>Akan Name Generator</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet"href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   </head>
   <body>
     <div class="content">
-      <div class="container">
+     <div class="container">
+      <nav>
+        <li>
+          <a href="home">Home</a>
+          <a href="calculation">Calculation</a>
+          <a href="feedback">Feedback</a>
+       </li>
+      </nav>
         <h1>The Akan name Calculator!</h1>
-        <p>Hello! This is a web application that takes your birthday details and calculates the day of the week you were born and then depending on your gender, outputs your Akan Name.are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day in the week they were born. </p>
+      <div class="intro">
+        <p>Hello! This site takes your birthday details and calculates the day of the week you were born and then depending on your gender, outputs your Akan Name.are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day in the week they were born. </p>
         <p>To find out what your Akan name is, proceed to filling the form below and clicking the generate name button.
+      </div>
         <form class="myform" onsubmit="return getAkanName()">
           <label for="year-of-birth">
             Year:
@@ -46,6 +55,13 @@
       <h4 id = display-name><strong>Your Akan name will be displayed below:</strong></h4>
       <p id="result"></p>
     </div>
+    <div id="feedback" class="well">
+       <h3>Feedback</h3>
+        <p>Your feedback is very important to us. Please fill the comment section below on what you feel about the application and what you would like us to improve on. </p>
+         <label for="comment">Comments/Suggestions</label>
+         <input type="text" id=comment-text name="comment" placeholder="Write comments here!" >
+         <input type="submit" value="Submit" class="btn">
+     </div>
   </div>
   <footer>
 
