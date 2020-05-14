@@ -29,3 +29,9 @@ li{
   padding: 40px;
   list-style: none;
 }
+.well{
+  margin: 40px;
+}
+.btn:hover {
+  background-color: green;
+}
