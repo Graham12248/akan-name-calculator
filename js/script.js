@@ -21,7 +21,7 @@ function getAkanName () {
 
   // validation functions
   function monthValidator () {
-    if (monthOfBirth < 1 || monthOfBirth > 12) {
+    if (monthOfBirth < 0 || monthOfBirth > 11) {
       return false;
     } else {
       return true;
@@ -99,7 +99,11 @@ function getAkanName () {
         document.getElementById('display-name').textContent = "Here is your Akan name: ";
         return false;
         break;
-    
+        case 0:
+          document.getElementById('result').textContent = "You were born on a Sunday: your Akan name is " + maleAkanNames[0];
+          document.getElementById('display-name').textContent = "Here is your Akan name: ";
+          return false;
+          break;
       default:
         alert("mmh no Akan name for you");
 
