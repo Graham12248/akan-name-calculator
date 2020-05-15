@@ -1,5 +1,7 @@
 .container{
   text-align: center;
+  background-color: #ff5722;
+  padding: 60px;
 }
 h1{
   font-family: monospace;
