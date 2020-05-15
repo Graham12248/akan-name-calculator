@@ -21,7 +21,7 @@ https://graham12248.github.io/akan-name-calculator/
 
 #####License
 
-MIT Lic###ense
+MIT License
 
 Copyright (c) 2019 Graham Otieno
 
