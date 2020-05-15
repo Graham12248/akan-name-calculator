@@ -27,37 +27,38 @@ function getAkanName () {
     }
   }
 
-function dayValidator () {
- if (monthOfBirth === 2 && Number(yearOfBirth)%4 === 0) {
-   if (dayOfBirth > 28 || dayOfBirth < 1) {
-     return false;
-   } else if (monthOfBirth === 2 && dayOfBirth > 29) {
-     return false;
-   } else if (monthOfBirth === 2 && dayOfBirth < 1) {
-     return false;
-   } else {
-     return true;
-   }
- } else if (dayOfBirth < 1 || dayOfBirth > 31){
-   return false;
- } else {
-   return true;
- }
-}
+  function dayValidator () {
+    if (monthOfBirth === 2 && Number(yearOfBirth)%4 === 0) {
+      if (dayOfBirth > 28 || dayOfBirth < 1) {
+        return false;
+      } else if (monthOfBirth === 2 && dayOfBirth > 29) {
+        return false;
+      } else if (monthOfBirth === 2 && dayOfBirth < 1) {
+        return false;
+      } else {
+        return true;
+      }
+    } else if (dayOfBirth < 1 || dayOfBirth > 31){
+      return false;
+    } else {
+      return true;
+    }
+  }
 
-//validation variables
-let monthValid = monthValidator();
-let dayValid = dayValidator();
+  //validation variables
+  let monthValid = monthValidator();
+  let dayValid = dayValidator();
 
-//formula to determine day of birth (Sunday = 1, Monday = 2)etc..
-let dayOfWeekNumber = Math.floor((((Number(yearOfBirth.slice(0,2))/4)-2*Number(yearOfBirth.slice(0,2))-1)+
-       ((5*Number(yearOfBirth.slice(2,4))/4))+((26*(monthOfBirth+1)/10))+dayOfBirth)%7);
+  //formula to determine day of birth (Sunday = 1, Monday = 2)etc..
+  let dayOfWeekNumber = Math.floor((((Number(yearOfBirth.slice(0,2))/4)-2*Number(yearOfBirth.slice(0,2))-1)+
+          ((5*Number(yearOfBirth.slice(2,4))/4))+((26*(monthOfBirth+1)/10))+dayOfBirth)%7);
 
-//creating arrays of Akan names for males and females
-let maleAkanNames = [
- "Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"
-];
-let femaleAkanNames = [
+  //creating arrays of Akan names for males and females
+  let maleAkanNames = [
+    "Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"
+  ];
+
+  let femaleAkanNames = [
     "Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"
   ];
 
@@ -99,7 +100,11 @@ let femaleAkanNames = [
         document.getElementById('display-name').textContent = "Here is your Akan name: ";
         return false;
         break;
-
+      case 0:
+        document.getElementById('result').textContent = "You were born on a Sunday: your Akan name is " + maleAkanNames[0];
+        document.getElementById('display-name').textContent = "Here is your Akan name: ";
+        return false;
+        break;
       default:
         alert("mmh no Akan name for you");
 
@@ -111,7 +116,7 @@ let femaleAkanNames = [
         document.getElementById('display-name').textContent = "Here is your Akan name: ";
         return false;
         break;
-        case 2:
+      case 2:
         document.getElementById('result').textContent = "You were born on a Monday: your Akan name is " + femaleAkanNames[1];
         document.getElementById('display-name').textContent = "Here is your Akan name: ";
         return false;
@@ -142,7 +147,11 @@ let femaleAkanNames = [
         document.getElementById('display-name').textContent = "Here is your Akan name: ";
         return false;
         break;
-
+      case 0:
+        document.getElementById('result').textContent = "You were born on a Sunday: your Akan name is " + femaleAkanNames[0];
+        document.getElementById('display-name').textContent = "Here is your Akan name: ";
+        return false;
+        break;
       default:
         alert("mmh no Akan name for you");
       }
