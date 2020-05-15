@@ -2,24 +2,24 @@
 This is my week two project(Akan name Calculator).It contains some brief description on the origin on names and a brief tutorial on how to enter the date of births and thus finding The Akan name Depending on the gender and day of birth .
 
 
-##contributors
+## Contributors
 
 Graham otieno Ochieng
 
-###Languages used
+### Languages used
 
 HTML
 CSS
 JavaScript
 
 
-####Live link
+#### Live link
 
 https://graham12248.github.io/akan-name-calculator/
 
 
 
-#####License
+##### License
 
 MIT License
 
